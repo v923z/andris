@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="192px"
+   height="320px"
+   viewBox="-1 -1 12 20"
+   id="svg5895"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="7-segment.svg">
+  <metadata
+     id="metadata5909">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs5907" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1364"
+     inkscape:window-height="718"
+     id="namedview5905"
+     showgrid="false"
+     inkscape:zoom="1.66875"
+     inkscape:cx="-4.9737828"
+     inkscape:cy="207.94007"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5895" />
+  <g
+     id="abcdefg"
+     style="fill-rule:evenodd;stroke:#ffffff;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="matrix(0.1,0,0,0.1,0.49250936,0.27228464)">
+    <polygon
+       id="a"
+       points="8,0 9,1 8,2 2,2 1,1 2,0 "
+       style="fill:#ff0000" />
+    <polygon
+       id="b"
+       points="10,8 9,9 8,8 8,2 9,1 10,2 "
+       style="fill:#ff0000" />
+    <polygon
+       id="c"
+       points="10,16 9,17 8,16 8,10 9,9 10,10 "
+       style="fill:#ff0000" />
+    <polygon
+       id="d"
+       points="2,18 1,17 2,16 8,16 9,17 8,18 "
+       style="fill:#ff0000" />
+    <polygon
+       id="e"
+       points="0,10 1,9 2,10 2,16 1,17 0,16 "
+       style="fill:#ff0000" />
+    <polygon
+       id="f"
+       points="0,2 1,1 2,2 2,8 1,9 0,8 "
+       style="fill:#ff0000" />
+    <polygon
+       id="g"
+       points="8,8 9,9 8,10 2,10 1,9 2,8 "
+       style="fill:#ff0000" />
+  </g>
+</svg>
