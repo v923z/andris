@@ -3,25 +3,8 @@
 uint8_t counter;
 uint16_t adc;
 
-void SetDigits(uint8_t number, uint8_t dot1, uint8_t dot2) {
-	uint8_t rem;
-	rem = number - 10 * (number / 10);
-	PORT_DIGIT &= (~NUMBER0 & ~NUMBER1);
-	PORT_DIGIT |= NUMBER0;
-	PORT_DISPLAY = ~digits[rem];
-	if(dot1) PORT_DISPLAY |= p;
-	_delay_ms(30);
-	rem = number / 10;
-	PORT_DIGIT &= (~NUMBER0 & ~NUMBER1);
-	PORT_DIGIT |= NUMBER1;
-	PORT_DISPLAY = ~digits[rem];
-	if(dot2) PORT_DISPLAY |= p;
-	_delay_ms(30);
-}
-
 int main (void) {
-	DDR_DISPLAY |= 0xff;
-	DDR_DIGIT |= (NUMBER0 | NUMBER1);
+	DISPLAY_INIT();
 	ADC_Init();
 	USART_Init();
 	

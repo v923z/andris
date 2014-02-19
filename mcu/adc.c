@@ -1,10 +1,8 @@
 #include "adc.h"
 
 void ADC_Init(void) {
-	// Internal voltage reference, 2.56 V. This also means that the highest 
-	// measureable voltage is 2.56 V, so care should be taken when hooking 
-	// anything up to the analog input channels 
-	ADMUX |= _BV(REFS0) | _BV(REFS1);
+	// Voltage reference on AV_CC
+	ADMUX |= _BV(REFS0);
 	// Prescaler 64 - approx. 190 kHz in this case
 	// 16 MHz clock; prescaler 32 -> 38 ks/s. See p. 207 for Atmega8
 	ADCSRA |= _BV(ADEN) | _BV(ADPS1) | _BV(ADPS2);
