@@ -6,7 +6,7 @@ void ADC_Init(void) {
 	// Prescaler 64 - approx. 190 kHz in this case
 	// 16 MHz clock; prescaler 32 -> 38 ks/s. See p. 207 for Atmega8
 	ADCSRA |= _BV(ADEN) | _BV(ADPS1) | _BV(ADPS2);
-	ADMUX &= ~( _BV(0) | _BV(1) | _BV(2) | _BV(3) );
+	ADMUX &= ~( _BV(0) );
 }
 
 uint16_t ADC_Conversion(unsigned char channel) {

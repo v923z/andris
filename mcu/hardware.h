@@ -1,10 +1,7 @@
 #ifndef _HARDWARE_H_ 
 #define _HARDWARE_H_ 
 
-#define GLUE(a, b)     a##b
-#define PORT(x)        GLUE(PORT, x)
-#define PIN(x)         GLUE(PIN, x)
-#define DDR(x)         GLUE(DDR, x)
+// Atmega88 definitions
 
 #define a		_BV(PD0)
 #define b		_BV(PD1)
@@ -26,10 +23,13 @@
 
 #define NUM0		_BV(PB0)
 #define NUM1		_BV(PB1)
+#define	DNUM0()		DDRB |= NUM0
+#define	DNUM1()		DDRB |= NUM1
+
 #define DIGIT0()	{ PORTB &= ~NUM0; PORTB &= ~NUM1; PORTB |= NUM0; }
 #define DIGIT1()	{ PORTB &= ~NUM0; PORTB &= ~NUM1; PORTB |= NUM1; }
 
-#define DISPLAY_INIT() 	{ DA(); DB(); DC(); DD(); DE(); DF(); DG(); DP(); }
+#define DISPLAY_INIT() 	{ DA(); DB(); DC(); DD(); DE(); DF(); DG(); DP(); DNUM0(); DNUM1(); }
 
 #define CA()	PORTD |= a
 #define CB()	PORTD |= b
@@ -50,14 +50,75 @@
 #define P()		PORTD &= ~p
 
 #define	PORT_SENSE		PORTC
+#define	PIN_SENSE		PINC
 #define	DDR_SENSE		DDRC
 
-#define	CLOCK_IN		_BV(PC2)
+#define	CLOCK_IN		_BV(PC1)
 #define	CLOCK_HIGH		(PINC & CLOCK_IN)
 
-#define SENSE_PIN0		(PINC & _BV(PC3))
-#define SENSE_PIN1		(PINC & _BV(PC4))
-#define SENSE_PIN2		(PINC & _BV(PC5))
-#define SENSE_PIN3		(PINC & _BV(PC6))
+#define SENSE_PIN0		(PIN_SENSE & _BV(PC2))
+#define SENSE_PIN1		(PIN_SENSE & _BV(PC3))
+#define SENSE_PIN2		(PIN_SENSE & _BV(PC4))
+#define SENSE_PIN3		(PIN_SENSE & _BV(PC5))
+
+#define	SENSE_PINS()		((SENSE_PIN0 | SENSE_PIN1 | SENSE_PIN2 | SENSE_PIN3) >> 2)
+
+//// Attiny44 definitions
+//#define a		_BV(PA2)
+//#define b		_BV(PA3)
+//#define c		_BV(PA4)
+//#define d		_BV(PA5)
+//#define e		_BV(PA6)
+//#define f		_BV(PA7)
+//#define g		_BV(PA0)
+//#define p		_BV(PA1)
+
+//#define DA()	DDRA |= a
+//#define DB()	DDRA |= b
+//#define DC()	DDRA |= c
+//#define DD()	DDRA |= d
+//#define DE()	DDRA |= e
+//#define DF()	DDRA |= f
+//#define DG()	DDRA |= g
+//#define DP()	DDRA |= p
+
+//#define NUM0		_BV(PB0)
+//#define NUM1		_BV(PB1)
+//#define	DNUM0()		DDRB |= NUM0
+//#define	DNUM1()		DDRB |= NUM1
+
+//#define DIGIT0()	{ PORTB &= ~NUM0; PORTB &= ~NUM1; PORTB |= NUM0; }
+//#define DIGIT1()	{ PORTB &= ~NUM0; PORTB &= ~NUM1; PORTB |= NUM1; }
+
+//#define DISPLAY_INIT() 	{ DA(); DB(); DC(); DD(); DE(); DF(); DG(); DP(); DNUM0(); DNUM1(); }
+
+//#define CA()	PORTA |= a
+//#define CB()	PORTA |= b
+//#define CC()	PORTA |= c
+//#define CD()	PORTA |= d
+//#define CE()	PORTA |= e
+//#define CF()	PORTA |= f
+//#define CG()	PORTA |= g
+//#define CP()	PORTA |= p
+
+//#define A()		PORTA &= ~a
+//#define B()		PORTA &= ~b
+//#define C()		PORTA &= ~c
+//#define D()		PORTA &= ~d
+//#define E()		PORTA &= ~e
+//#define F()		PORTA &= ~f
+//#define G()		PORTA &= ~g
+//#define P()		PORTA &= ~p
+
+//#define	PORT_SENSE		PORTB
+//#define	DDR_SENSE		DDRB
+
+//#define	CLOCK_IN		_BV(PB2)
+//#define	CLOCK_HIGH		(PINB & CLOCK_IN)
+
+//#define SENSE_PIN0		(PINA & _BV(PA1))
+//#define SENSE_PIN1		(PINC & _BV(PC4))
+//#define SENSE_PIN2		(PINC & _BV(PC5))
+//#define SENSE_PIN3		(PINC & _BV(PC6))
 
 #endif
