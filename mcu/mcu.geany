@@ -22,7 +22,7 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=2
+current_page=1
 FILE_NAME_0=455;Make;0;EUTF-8;1;1;0;%2Fhome%2Fv923z%2Fuseful%2Felectro%2Fandris%2Fmcu%2Fmakefile;0;4
 FILE_NAME_1=324;C;0;EUTF-8;1;1;0;%2Fhome%2Fv923z%2Fuseful%2Felectro%2Fandris%2Fmcu%2Fmain.c;0;4
 FILE_NAME_2=754;C;0;EUTF-8;1;1;0;%2Fhome%2Fv923z%2Fuseful%2Felectro%2Fandris%2Fmcu%2Fhardware.h;0;4

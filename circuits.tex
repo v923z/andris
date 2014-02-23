@@ -315,4 +315,49 @@ A következő áramkör nagyon hasonlít az előzőhöz, de a körök azonos ir�
 
 \includegraphics[width=0.95\textwidth]{/home/v923z/useful/electro/andris/7-segment_running02.pdf}
 
+\section{Kis számítógép}
+
+Most már nagyon sok áramkört megépítettél, itt az ideje, hogy valami bonyolultabbat is alkossunk. A következő néhány 
+részben a kis számítógéppel fogunk dolgozni. A kapcsolási rajzot itt találod:
+
+\includegraphics[width=0.95\textwidth]{/home/v923z/useful/electro/andris/atmega88_base.pdf}
+
+Van néhány dolog, amit nagyon fontos megjegyezned, és pontosan csinálnod, egyébként az áramkör tönkremehet. Az egyik 
+ilyen, hogy a pozitív feszültségnek mindig a hetes, a negatívnak pedig a nyolcas lábon kell lennie. Ha ezt a kettőt 
+felcseréled, akkor a számítógép végleg elromolhat. A másik ilyen dolog, hogy az egyes lábat a pozitív feszültséghez 
+kell kötni. Ha nem teszed, akkor az áramkör nem fog megbízhatóan működni. 
+
+A kis képernyőt úgy kell csatlakoztatni a számítógéphez, hogy az A led az a lábhoz, a B led a b lábhoz, stb. legyen 
+kötve. A 14-es és 15-ös lábat (számjegy felirat) a kis képernyő számainak harmadik lábához kell csatlakoztatni, a 
+14-est az egyik, a 15-öst a másik számjegyhez. Ez a láb határozza meg, hogy egy adott pillanatban melyik led világít. A 
+valóságban a ledek soha nem egyszerre világítanak, hanem felváltva, de olyan gyorsan, hogy ezt nem látod. Az 
+elektronikában ezt multiplexelésnek hívják, és nagyon sok helyen alkalmazzák. Ha esetleg a két lábat felcseréled, akkor 
+csak annyi fog történni, hogy az a számjegy, ami eddig a második volt, mostantól az első lesz, és fordítva. 
+
+Végül, a kis számítógépnek van négy kontrollvezetéke. Ezek határozzák meg, hogy a számítógép az adott áramkörben milyen 
+feladatod fog végezni. Ezeket a lábakat egyszerűen vagy a pozitív, vagy a negatív tápfeszültséghez kell kötni. A 
+következők\-ben néhány lehetséges áramkört megnézünk közelebbről is.
+
+\subsection{Számláló áramkör kis képernyővel 1.}
+
+Az első áramkör egy egyszerű számláló 99-ig. Az órajelet és a kontrollvezetékeket a következő ábrán láthatod. (Egy 
+kontrollvezeték a pozitív, a másik három a negatív tápfeszültséghez csatlakozik.) Ez a számláló felfelé számol. 
+
+\includegraphics[width=0.95\textwidth]{/home/v923z/useful/electro/andris/atmega88_counter_up.pdf}
+
+\subsection{Számláló áramkör kis képernyővel 2.}
+
+Hasonló az előző áramkörhöz, de lefelé számol. Az órajelet és a kontrollvezetékeket a következő ábrán láthatod. 
+(Egy kontrollvezeték a pozitív, a másik három a negatív tápfeszültséghez csatlakozik.)
+
+\includegraphics[width=0.95\textwidth]{/home/v923z/useful/electro/andris/atmega88_counter_down.pdf}
+
+\subsection{Voltmérő}
+
+Ezzel az áramkörrel feszültséget lehet mérni. Fontos, hogy csak az elektromos játékban lehet vele mérni, ha máshol (pl. 
+9 voltos elemet stb.) próbálsz meg mérni, az áramkör elromolhat. A bemenőjel helyét és a kontrollvezetékeket a 
+következő ábrán láthatod. (Két kontrollvezeték a pozitív, másik kettő pedig a negatív tápfeszültséghez csatlakozik.)
+
+\includegraphics[width=0.95\textwidth]{/home/v923z/useful/electro/andris/atmega88_voltmeter.pdf}
+
 \end{document}
