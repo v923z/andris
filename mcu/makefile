@@ -37,6 +37,7 @@ serial.o: serial.c serial.h
 	$(CC) $(CFLAGS) -c serial.c
 
 load88:
+	sleep 2
 	sudo avrdude -p $(MCU_DUDE) -P usb -c avrisp2 -e -U flash:w:$(TARGET).hex -U lfuse:w:0xe2:m -U hfuse:w:0xdf:m
 
 dragon88:

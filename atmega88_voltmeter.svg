@@ -50,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1321,5 +1321,53 @@
          x="322.29688"
          y="446.22937"
          style="font-size:16px;fill:#338000">pont</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="600.53198"
+       y="269.34027"
+       id="text8149-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8151-4"
+         x="600.53198"
+         y="269.34027"
+         style="font-size:24px;fill:#ff0000">+</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="601.1178"
+       y="286.43213"
+       id="text8149-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8151-2"
+         x="601.1178"
+         y="286.43213"
+         style="font-size:24px;fill:#ff0000">+</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#1000ff;fill-opacity:1;stroke:#0004ff;stroke-opacity:1;font-family:Sans"
+       x="603.48083"
+       y="254.38908"
+       id="text8155-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8157-7"
+         x="603.48083"
+         y="254.38908"
+         style="font-size:40px;fill:#1000ff;fill-opacity:1;stroke:#0004ff;stroke-opacity:1">-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#1000ff;fill-opacity:1;stroke:#0004ff;stroke-opacity:1;font-family:Sans"
+       x="603.67688"
+       y="236.0043"
+       id="text8155-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8157-8"
+         x="603.67688"
+         y="236.0043"
+         style="font-size:40px;fill:#1000ff;fill-opacity:1;stroke:#0004ff;stroke-opacity:1">-</tspan></text>
   </g>
 </svg>

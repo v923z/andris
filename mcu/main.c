@@ -14,7 +14,11 @@ int main (void) {
 	//USART_Restore();
 	
 	for(;;) {
-		if(SENSE_PINS() == 3) {	// Voltmeter
+		if(SENSE_PINS() == 4) {	// Voltmeter with linear LED display
+			adc = ADC_BlockMeasure(0, 50);
+			PORTD = (adc >> 2);
+		}
+		else if(SENSE_PINS() == 3) {	// Voltmeter with numerical display
 			adc = ADC_BlockMeasure(0, 50);
 			SetDigits((adc >> 10), 0, 1);
 		}
@@ -28,8 +32,7 @@ int main (void) {
 			if(counter == 100) counter = 0;
 			SetDigits(counter, 0, 0);
 		}
-		//if(SENSE_PINS() == 2) {	// We are counting DOWN
-		else {
+		else if(SENSE_PINS() == 2) {	// We are counting DOWN
 			if(CLOCK_HIGH) {
 				if(prev == 0) {
 					prev = 1;
