@@ -22,9 +22,9 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=0
+current_page=1
 FILE_NAME_0=891;Make;0;EUTF-8;1;1;0;%2Fhome%2Fv923z%2Fuseful%2Felectro%2Fandris%2Fmcu%2Fmakefile;0;4
-FILE_NAME_1=503;C;0;EUTF-8;1;1;0;%2Fhome%2Fv923z%2Fuseful%2Felectro%2Fandris%2Fmcu%2Fmain.c;0;4
+FILE_NAME_1=376;C;0;EUTF-8;1;1;0;%2Fhome%2Fv923z%2Fuseful%2Felectro%2Fandris%2Fmcu%2Fmain.c;0;4
 FILE_NAME_2=89;C;0;EUTF-8;1;1;0;%2Fhome%2Fv923z%2Fuseful%2Felectro%2Fandris%2Fmcu%2Fhardware.h;0;4
 FILE_NAME_3=18;C;0;EUTF-8;1;1;0;%2Fhome%2Fv923z%2Fuseful%2Felectro%2Fandris%2Fmcu%2Fdisplay.h;0;4
 FILE_NAME_4=158;C;0;EUTF-8;1;1;0;%2Fhome%2Fv923z%2Fuseful%2Felectro%2Fandris%2Fmcu%2Fadc.h;0;4

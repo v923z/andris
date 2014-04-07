@@ -1,7 +1,7 @@
 #include "display.h"
 
 uint16_t counter = 0;
-uint8_t prev = 0;
+uint8_t prev = 0, i;
 uint16_t adc;
 extern volatile uint8_t control_byte;
 
@@ -15,8 +15,12 @@ int main (void) {
 	
 	for(;;) {
 		if(SENSE_PINS() == 4) {	// Voltmeter with linear LED display
-			adc = ADC_BlockMeasure(0, 50);
-			PORTD = (adc >> 2);
+			adc = ADC_BlockMeasure(0, 4);
+			adc = (adc >> 9);
+			PORTD = 0;
+			for(i = 0; i < adc; i++) {
+				PORTD |= _BV(i);
+			}
 		}
 		else if(SENSE_PINS() == 3) {	// Voltmeter with numerical display
 			adc = ADC_BlockMeasure(0, 50);
